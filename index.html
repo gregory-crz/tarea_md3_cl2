@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <script>
+        //Diseñá una clase Auto
+        class Auto {
+            constructor(marca, modelo, año_de_fabricacion, cantidad_de_puertas) {
+                this.marca = marca;
+                this.modelo = modelo;
+                this.año_de_fabricacion = año_de_fabricacion;
+                this.cantidad_de_puertas = cantidad_de_puertas;
+            }
+            // metodos
+            acelerar() {
+                console.log("acelerando");
+            }
+            subirVidrios() {
+                console.log("subiendo vidrios..");
+            }
+        }
+        // nuevas clases
+        class AutoGas extends Auto {
+            acelerar() {
+                console.log("acelerando a gas..");
+            }
+        }
+
+        class Nafta extends Auto {
+            acelerar() {
+                console.log("acelerando a nafta..");
+            }
+        }
+        class Electrico extends Auto {
+            acelerar() {
+                console.log("acelerando eléctricos..");
+            }
+        }
+        //variables
+        const au1 = new AutoGas('kia', 'pop', '1999', '4')
+        const au2 = new Nafta('kia', 'soul', '2010', '4')
+        const au3 = new Electrico('kia', 'cerato', '2018', '4')
+
+
+
+
+        //En este ejercicio, deberá crear un programa que use el Objeto Date() para
+        //devolver un alert que exprese qué día de la semana es.
+
+        let fecha = new Date();
+        let dia = fecha.getDate();
+
+        alert('día '+ dia); 
+
+
+    </script>
+</body>
+
+</html>
